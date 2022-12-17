@@ -1,11 +1,15 @@
 #!/bin/bash
 
 # Set LibreWolf chrome folder path
-chromePath='/Users/dennis/Library/Application Support/librewolf/Profiles/dqpufw27.default-default/chrome'
+chromePath="/Users/dennis/Library/Application Support/librewolf/Profiles/dqpufw27.default-default/chrome"
+
+# Set local style repository path
+repoPath="/Users/dennis/Documents/DennisDokumente/Coding/LibreWolfCSS"
 
 # Set url to remote repository with the style sheets
 gitURL="https://github.com/DennisIguess/LibreWolfStyles"
 
+cd "$repoPath"
 
 echo "Checking remote repository..."
 if ! git ls-remote --exit-code "$gitURL" > /dev/null; then
@@ -14,14 +18,25 @@ if ! git ls-remote --exit-code "$gitURL" > /dev/null; then
 fi
 echo "Repository valid!"
 
+echo "Generating list of available themes..."
+ls -d */ > availableThemes.txt
+
+echo "These themes are currently available:"
+cat availableThemes.txt
+
 echo "Enter the full name of the theme as seen on the git repo: "
 read theme
+
+if ! grep -q "'$theme'" availableThemes.txt; then
+    echo "This theme is not  available. Exiting"
+    exit 0
+fi
 
 echo "'$theme' selected, preparing chrome folder: '$chromePath'"
 cd "$chromePath"
 
 echo "These files are about to be deleted, are you sure? [y or n]"
-ls .
+ls -lAh .
 read sure
 
 if [ "$sure" != "y" ]; then
