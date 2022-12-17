@@ -1,3 +1,8 @@
+## Note:
+This is not my work, check out https://github.com/mut-ex/minimal-functional-fox/!
+The rest of this README is theirs, so feel free to donate or something
+
+
 # minimal-functional-fox
 
 > ###### *A minimal, yet functional configuration for Firefox!*
