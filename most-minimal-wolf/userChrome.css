@@ -1,3 +1,12 @@
-box#navigator-toolbox-background {
+/* commpletely removes titlebar and navbar to make the window borderless.
+   the actual most minimal design :) */
+
+#titlebar {
     display: none !important;
 }
+
+#nav-bar {
+    display: none !important;
+}
+
+
