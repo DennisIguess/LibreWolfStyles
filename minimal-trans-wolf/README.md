@@ -1,5 +1,7 @@
 ## Note:
 This is not my work, check out https://github.com/mut-ex/minimal-functional-fox/!
+
+I just updated some of their code to hide the window controls and some other minor cosmetic changes.
 The rest of this README is theirs, so feel free to donate or something
 
 
