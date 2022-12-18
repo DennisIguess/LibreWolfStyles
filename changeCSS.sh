@@ -23,6 +23,9 @@ if ! git ls-remote --exit-code "$gitURL" > /dev/null; then
 fi
 echo -e "${GREEN}Repository valid!${NOCOLOR}"
 
+echo "Updating local repo..."
+git pull origin main
+
 echo "These themes are currently available:"
 ls -d */
 
