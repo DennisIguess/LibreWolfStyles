@@ -29,8 +29,25 @@ git pull origin main
 echo "These themes are currently available:"
 ls -d */
 
-echo -e "Enter the full name of the theme as seen above ${RED}EXCLUDING${NOCOLOR} trailing /:"
+echo -e "Enter the full name of the theme as seen above ${RED}EXCLUDING${NOCOLOR} trailing /.\nIf you want to revert to the default theme, type DELETE"
 read theme
+
+if [ "$theme" = "DELETE" ]; then
+    echo "chrome folder will be cleared. Sure? [y or n]"
+    read boolDelete
+    if [ "$boolDelete" != "y" ]; then
+        read -p "Exiting script, no files changed"
+        exit 0
+    elif [ "$boolDelete" = "y" ]; then
+        cd "$chromePath"
+        cd ..
+        rm -rf chrome
+        mkdir chrome
+        cd chrome
+        read -p "Chrome folder cleared!"
+        exit 0
+    fi
+fi
 
 if ! test -d "$theme"; then
     read -p "This theme is not  available. Exiting"
