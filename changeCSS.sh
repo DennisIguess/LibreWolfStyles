@@ -4,7 +4,7 @@
 chromePath="/Users/dana/Library/Application Support/librewolf/Profiles/dqpufw27.default-default/chrome"
 
 # Set local style repository path
-repoPath="/Users/dana/Documents/DennisDokumente/Coding/LibreWolfCSS"
+repoPath="/Users/dana/Documents/DanasDokumente/Coding/LibreWolfCSS"
 
 # Set url to remote repository with the style sheets
 gitURL="https://github.com/DennisIguess/LibreWolfStyles"
