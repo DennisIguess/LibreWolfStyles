@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set LibreWolf chrome folder path
-chromePath="/Users/dana/Library/Application Support/librewolf/Profiles/dqpufw27.default-default/chrome"
+chromePath="/Users/dana/Library/Application Support/Firefox/Profiles/5esj4crh.default-release-1-1700766542840/chrome"
 
 # Set local style repository path
 repoPath="/Users/dana/Documents/DanasDokumente/Coding/LibreWolfCSS"
