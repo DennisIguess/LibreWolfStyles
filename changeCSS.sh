@@ -73,11 +73,11 @@ mkdir chrome
 cd chrome
 
 
-echo "Cloning repository in clean chrome folder" 
+echo "Cloning repository in clean chrome folder"
 git clone "$gitURL" .
 find . -mindepth 1 -maxdepth 1 -not -name "$theme" -print0 | xargs -0 -r rm -rf
 mv "$theme"/* .
 rm -r "$theme"
 
-read -p "New theme applied!"
+echo "New theme applied!"
 exit 0
